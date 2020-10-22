@@ -42,20 +42,15 @@ const Main = () => {
     const scroll = () => {
         if (!isFetching && !fetchError) {
             dispatch(fetchData(pageCount));
-            console.log(pageCount)
             setPageCount(pageCount + 1);
-            console.log('scroll ' + pageCount);
         }
-        console.log('resolve error first ');
     }
 
     const retry = () => {
         if (searchError && beer) {
-            console.log('search retry');
             dispatch(searchBear(beer));
         }
         else {
-            console.log('retry ' + pageCount - 1);
             dispatch(fetchData(pageCount - 1));
         }
     }
