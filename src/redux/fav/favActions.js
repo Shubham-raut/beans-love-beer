@@ -34,12 +34,9 @@ export const addToFav = (currentItem) => {
         else {
             dispatch(removeFav(favData, currentItem));
         }
-        // dispatch(saveState(favData));
 
         const favState = JSON.stringify(store.getState().favState.favData);
         localStorage.setItem('favState', favState);
-
-
     }
 }
 
@@ -57,12 +54,3 @@ export const loadState = () => {
         }
     }
 };
-
-// const saveState = (state) => {
-//     try {
-//         const favState = JSON.stringify(state);
-//         localStorage.setItem('favState', favState);
-//     } catch {
-//         // 
-//     }
-// };

@@ -8,7 +8,6 @@ import {
     SEARCH_FAILURE,
 } from "./beerConstants";
 import axios from 'axios';
-// import store from '../store';
 
 export const setBeer = (beer) => {
     return {
@@ -61,9 +60,6 @@ const searchFailure = (error) => {
     }
 }
 
-
-
-
 export const fetchData = (page) => {
     return (dispatch) => {
         dispatch(fetchRequest());
@@ -93,4 +89,3 @@ export const searchBear = (beer) => {
             });
     }
 }
-

@@ -5,14 +5,12 @@ import './Search.css';
 
 const Search = () => {
     const beer = useSelector(state => state.beerState.beer);
-    // const beerData = useSelector(state => state.beerState.beerData);
     const dispatch = useDispatch();
 
     const beerClick = (e) => {
         e.preventDefault();
         dispatch(searchBear(beer));
     }
-
 
     return (
         <form id="mainSearch" className='beerSearch' onSubmit={beerClick}>
